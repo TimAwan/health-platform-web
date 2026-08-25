@@ -1,0 +1,77 @@
+:root {
+  /* 医疗青绿主题：以临床信任感为源点，替换 Element Plus 默认蓝 */
+  --hp-primary: #0f766e;
+  --hp-primary-hover: #0d9488;
+  --hp-ink: #1c2b33;
+  --hp-ink-soft: #55707d;
+  --hp-bg: #f6f8f8;
+  --hp-sidebar: #10201e;
+  --hp-sidebar-active: #0f766e;
+  --hp-pending: #b45309;
+  --hp-approved: #15803d;
+  --hp-rejected: #b91c1c;
+  --hp-suspended: #6b7280;
+  --hp-terminated: #7f1d1d;
+
+  --el-color-primary: var(--hp-primary);
+  --el-color-primary-light-3: #4d9a93;
+  --el-color-primary-light-5: #7fb8b2;
+  --el-color-primary-light-7: #b3d8d4;
+  --el-color-primary-light-8: #cfe7e4;
+  --el-color-primary-light-9: #e7f3f1;
+  --el-color-primary-dark-2: #0b5d57;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'HarmonyOS Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+  color: var(--hp-ink);
+  background: var(--hp-bg);
+  font-size: 14px;
+}
+
+/* 数据列（ID、价格、时间）使用等宽数字，读数不跳动 */
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 审核状态色体系 */
+.status-tag {
+  font-variant-numeric: tabular-nums;
+}
+
+.status-PENDING_REVIEW { --el-tag-text-color: var(--hp-pending); --el-tag-bg-color: #fef3e2; --el-tag-border-color: #f5dcc0; }
+.status-APPROVED { --el-tag-text-color: var(--hp-approved); --el-tag-bg-color: #e9f7ee; --el-tag-border-color: #cdeed9; }
+.status-REJECTED { --el-tag-text-color: var(--hp-rejected); --el-tag-bg-color: #fdecec; --el-tag-border-color: #f6cdcd; }
+.status-SUSPENDED { --el-tag-text-color: var(--hp-suspended); --el-tag-bg-color: #f1f2f4; --el-tag-border-color: #e2e4e8; }
+.status-TERMINATED { --el-tag-text-color: var(--hp-terminated); --el-tag-bg-color: #f9eaea; --el-tag-border-color: #eed2d2; }
+.status-ON_SHELF { --el-tag-text-color: var(--hp-approved); --el-tag-bg-color: #e9f7ee; --el-tag-border-color: #cdeed9; }
+.status-OFF_SHELF { --el-tag-text-color: var(--hp-suspended); --el-tag-bg-color: #f1f2f4; --el-tag-border-color: #e2e4e8; }
+.status-ACTIVE { --el-tag-text-color: var(--hp-approved); --el-tag-bg-color: #e9f7ee; --el-tag-border-color: #cdeed9; }
+
+.page-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pager {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
